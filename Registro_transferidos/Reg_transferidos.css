@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'open sans';
+}
+
+body {
+    font-family: 'open sans';
+    font-size: 16px;
+    padding-top: 0px;
+    background-color: #fff;
+text-align: center;
+    /*background-image: url(fondoprin.jpg);
+        background-repeat: all;
+        
+        background-size: 100%;*/
+}
+ 
+
+.menu_bar{
+    display: none;
+    
+}
+#titu{
+    
+
+    position: absolute;
+    left:10%;
+    top:50%;
+}
+#cabezera{
+    background-color: black;
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    
+    z-index:11;
+    top:0;
+    text-align: center;
+
+
+    
+}
+#cabezera ul{
+    padding:0;         /*PADDING ANCHO O ESPACIO DE ZONA*/
+    list-style:none;
+   margin-right: 400px;
+
+}
+
+.menu{
+        position: relative;
+        left: 30%;
+        top:30%; /*posicion de menu*/
+
+
+}
+.menu > li {
+        display:inline-block;/*ELEM DE LINEA*/
+        border: 1px solid #fff;/*Bordes de texto del menu*/
+        border-radius: 16px;
+        position: relative;
+
+
+       
+        }
+.menu > li >a{
+        display:block;/*ELEM DE BLOQUE-col*/
+        padding:7px 7px; /*Bordes externos x,y*/
+        
+        color:white;
+
+        }
+li ul{
+        position: absolute;
+        display:none; /*NO PORQUE SE DESPLIEGA CUNADO HAGO ALGO*/
+
+        }
+.submenu a{
+            display:table-caption;
+            padding:7px 3px;
+            width:120px;
+
+           
+            }
+        li:hover ul{
+        display:block; /* al acercar el Raton muestra los bloques*/
+        border: 1px solid #fff;/*Bordes de texto del menu*/
+        border-radius: 16px;
+        border-color: black;
+
+        position: absolute;
+        width: 150px;
+        background-color: rgba(39, 33, 7, .7);
+
+        }
+.menu a {
+            color:white;
+            text-decoration:none;
+            
+
+            }
+.menu li:hover{  /* HOVER ACTIVA CUNADO EL MAUSE PASA POR UN ELLEMTO*/
+   
+    background: rgba(247, 232, 14, .6);
+    /*APLICA SOMBRA AL TEXTO 1PX 1PX 2PX BLACK--EJE X EJE Y BLUR-RADIUS COLOR*/ 
+}
+.submenu li:hover{
+   
+     background: rgba(249, 182, 6, .4);
+     border: 1px solid #fff;/*Bordes de texto del menu*/
+        border-radius: 16px;
+}
+.submenu a{
+        -webkit-text-stroke:0.4px black;
+        font:bold 12px;
+
+}
+header {
+    width: 100%;
+    height: 650px;
+    background-image: url(../Image/cielo.jpeg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+
+    
+    
+}
+
+header .textos {
+    margin-top: 152px;
+    
+
+}
+
+header .titulo {
+    font-size: 85px;
+
+}
+h1{
+    -webkit-text-stroke:1px black;
+}
+h2{
+    -webkit-text-stroke:1px black;
+}
+h3{
+    -webkit-text-stroke:0.5px black;
+}
+
+header .subtitulo {
+    font-size: 42px;
+    font-weight: 300;
+    margin-bottom: 32px;
+}
+
+header .boton {
+    display: inline-block;
+    padding: 6px;
+    width: 128px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 19px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 16px;
+}
+
+.sesgoabajo {
+    
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-width: 35vh 0 0 100vw;
+    border-style: solid;
+    border-color:  transparent transparent transparent #fff;
+}
+/*el primero es el borde superior, el segundo es el borde derecho, 
+el tercero es el borde inferior y el cuarto es el borde izquierdo*/
+
+.sesgoarriba {
+
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-width:  0 100vw 35vh 0;/*35vh 100vw 0 0*/
+    border-style: solid;
+    border-color:  transparent #fff transparent transparent ;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    padding: 52px 0;
+
+}
+/*Efectos del Menu*/
+.headroom{
+    transition: transform -3s ease;
+
+}
+.headroom--pinned{
+    transform: translateY(0%);
+}
+.headroom--unpinned{
+    transform: translateY(-100%);
+}
+
+
+.fondo {
+    height: 900px;
+    position: relative;
+    background-image: url(../Image/2.jpg);
+    overflow: hidden;
+    background-attachment: fixed;
+    background-position: center;
+    padding-top: 130px;
+    background-size: 100%;
+}
+
+
+.contenedor-form {
+    background: rgba(39, 33, 7,.7);
+    max-width: 500px;
+    width: 100%;
+    margin: 48px auto;
+    border-radius: 55px;
+    color: #fff;
+    position: relative;
+
+    /*padding: 40px;*/
+}
+
+.contenedor-form h2 {
+    margin: 0 0 28px 0;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 1;
+}
+.contenedor-form h3 {
+    margin: 0 0 28px 0;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+}
+.contenedor-form input[type="text"],
+.contenedor-form input[type="password"],
+ .contenedor-form input[type="number"],
+ .contenedor-form input[type="date"],
+ .contenedor-form select{
+    outline: none;
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    margin: 0 0 20px 0;
+    background: rgba(21, 17, 9,.8);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    border-bottom: 4px solid #ff851b;
+    box-sizing: border-box;
+    font-family: 'open sans' ;
+    font-size: 14px;
+    font-weight:normal;
+    transition: all .5s ease;
+}
+
+.contenedor-form input[type="text"]:focus,
+.contenedor-form input[type="password"]:focus,
+.contenedor-form input[type="number"]:focus,
+.contenedor-form input[type="date"]:focus,
+ .contenedor-form select:focus{
+    border-bottom: 4px solid #EED893;
+}
+
+.contenedor-form input[type="submit"] {
+    background: rgba(247, 245, 241, .2);
+    color: #FFF;
+    width: 40%;
+
+    border: 1px solid #fff;
+    border-radius: 40px;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: 'open sans';
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.contenedor-form input[type="submit"]:hover {
+    background: rgba(238, 216, 147, 0.7);
+}
+.izquierda{
+    margin-bottom: 15px;
+ 
+    padding-right: 20px;
+    margin-left: 0;
+    float: left;
+    width: 50%;
+}
+.izquierdagen{
+
+    padding-right: 20px;
+    margin-left: 0;
+    float: left;
+    width: 50%;
+}
+.izquierdafecha{
+    padding-top: 13px;
+     padding-right: 20px;
+    margin-left: 0;
+    float: left;
+    width: 50%;
+}
+.izquierdacel{
+    padding-top: 23px;
+    padding-right: 20px;
+    margin-left: 0;
+    float: left;
+    width: 50%;   
+}
+.izquierdalu{
+padding-top: 43px;
+    padding-right: 20px;
+    margin-left: 0;
+    float: left;
+    width: 50%;
+}
+.izquierdaocu{
+    padding-top: 0px;
+    padding-left: 20px;
+    margin-left: 0;
+    float: left;
+    width: 50%;
+}
+.derechatel{
+  
+    padding-top: 23px;
+    padding-left: 20px;
+    margin-left: 0;
+  float: right;
+  width: 50%;
+}
+.derechapro{
+    
+    padding-top: 23px;
+    padding-left: 20px;
+    margin-left: 0;
+  float: right;
+  width: 50%;
+}
+.derecha{
+    margin-bottom: 15px;
+  
+    padding-left: 20px;
+    margin-left: 0;
+  float: right;
+  width: 50%;
+}
+
+.contenedor-form .formulario {
+    
+    padding: 40px;
+}
+
+.contenedor-form .formulario:nth-child(2) {
+    display: block;
+}

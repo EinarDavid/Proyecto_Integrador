@@ -1,0 +1,440 @@
+* {
+    margin: 0;
+    padding: 0;
+-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'open sans';
+
+}
+
+body {
+    font-family: 'open sans';
+    font-size: 16px;
+    padding-top: 0px;
+    background-color: #fff;
+
+    /*background-image: url(fondoprin.jpg);
+        background-repeat: all;
+        
+        background-size: 100%;*/
+}
+.menu_bar{
+    display: none;
+   
+}
+#titu{
+    
+    position: absolute;
+    left:10%;
+    top:50%;
+}
+#cabezera{
+    background-color: black;
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    
+    z-index:11;
+    top:0;
+    text-align: center;
+
+
+    
+}
+#cabezera ul{
+    padding:0;         /*PADDING ANCHO O ESPACIO DE ZONA*/
+    list-style:none;
+   margin-right: -300px;
+
+}
+
+.menu{
+        position: relative;
+        left: 30%;
+        top:30%; /*posicion de menu*/
+
+
+}
+.menu > li {
+        display:inline-block;/*ELEM DE LINEA*/
+        border: 1px solid #fff;/*Bordes de texto del menu*/
+        border-radius: 16px;
+        position: relative;
+
+
+       
+        }
+.menu > li >a{
+        display:block;/*ELEM DE BLOQUE-col*/
+        padding:7px 7px; /*Bordes externos x,y*/
+        
+        color:white;
+
+        }
+li ul{
+        position: absolute;
+        display:none; /*NO PORQUE SE DESPLIEGA CUNADO HAGO ALGO*/
+
+        }
+.submenu a{
+            display:table-caption;
+            padding:7px 3px;
+            width:120px;
+           
+            }
+        li:hover ul{
+        display:block; /* al acercar el Raton muestra los bloques*/
+        border: 1px solid #fff;/*Bordes de texto del menu*/
+        border-radius: 16px;
+        border-color: black;
+
+        position: absolute;
+        width: 150px;
+        background-color: rgba(39, 33, 7, .7);
+
+        }
+.menu a {
+            color:white;
+            text-decoration:none;
+            
+
+            }
+.menu li:hover{  /* HOVER ACTIVA CUNADO EL MAUSE PASA POR UN ELLEMTO*/
+ 
+    background: rgba(247, 232, 14, .6);
+   /*APLICA SOMBRA AL TEXTO 1PX 1PX 2PX BLACK--EJE X EJE Y BLUR-RADIUS COLOR*/ 
+}
+.submenu li:hover{
+    
+     background: rgba(249, 182, 6, .4);
+     border: 1px solid #fff;/*Bordes de texto del menu*/
+        border-radius: 16px;
+}
+.submenu a{
+        -webkit-text-stroke:0.4px black;
+        font:bold 12px;
+
+}
+header {
+    width: 100%;
+    height: 650px;
+    background-image: url(../Image/fon5.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+
+   
+}
+
+header .textos {
+    margin-top: 100px;
+    
+
+}
+
+header .titulo {
+    font-size: 85px;
+
+}
+h1{
+    -webkit-text-stroke:1px black;
+}
+h2{
+  -webkit-text-stroke:0.5px black; 
+}
+h3{
+    -webkit-text-stroke:0.5px black;
+}
+
+header .subtitulo {
+    font-size: 42px;
+    font-weight: 300;
+    margin-bottom: 32px;
+}
+
+header .boton {
+    display: inline-block;
+    padding: 6px;
+    width: 128px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 19px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 16px;
+}
+
+.sesgoabajo {
+    
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-width: 35vh 0 0 100vw;
+    border-style: solid;
+    border-color:  transparent  transparent transparent #fff;
+}
+.sesgoabajo2 {
+    
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 35vh 100vw;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+}
+.sesgoarriba {
+
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-width: 35vh 100vw 0 0;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+}
+.sesgoarriba2 {
+
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-width:  0 100vw 35vh 0;/*35vh 100vw 0 0*/
+    border-style: solid;
+    border-color:  transparent #fff transparent transparent ;
+}
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    padding: 52px 0;
+
+}
+/*Efectos del Menu*/
+.headroom{
+    transition: transform -3s ease;
+
+}
+.headroom--pinned{
+    transform: translateY(0%);
+}
+.headroom--unpinned{
+    transform: translateY(-100%);
+
+}
+
+.sobre-nosotros {
+    text-align: center;
+    font-size: 56px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.parrafo {
+    margin-bottom: 13px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 24px;
+    color: rgb(24, 16, 16);
+}
+.fondo2 {
+    height: 900px;
+    position: relative;
+    background-image: url(../Image/Fondo_1.jpeg);
+
+    overflow: hidden;
+    background-attachment: fixed;
+    background-position: center;
+    padding-top: 130px;
+    background-size: 100%;
+}
+.titulo-footer,
+.subtitulo-footer {
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+    font-size: 56px;
+}
+
+.subtitulo-footer {
+    font-size: 16px;
+    margin-bottom: 64px;
+}
+.clientes {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+    width: 100%;
+    justify-content: space-between;
+    color: #FFF;
+}
+.cliente2 {
+    width: 30%;
+    text-align: center;
+}
+.cliente2 img{
+    width: 50%;
+    border-radius: 100%;   
+}
+
+.cliente2 h3{
+    color: #fff;
+}
+.cliente h4{
+    color: #fff;
+}
+.cliente h3{
+    color: #fff;
+}
+.footer{
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+    font-size: 56px;
+    font-size: 25px;
+   
+}
+.galeria {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.imagenes {
+    width: 20%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+.imagenes img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.encima {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  
+}
+
+.encima h2 {
+    position: relative;
+    top: 65%;
+    text-align: center;
+    color: #fff;
+}
+
+.encima div {
+    position: relative;
+    display: block;
+    top: 46%;
+    width: 40px;
+    height: 5px;
+    background: #fff;
+    margin: auto;
+}
+.container-footer-all{
+    width: 100%;
+    max-width: 2400px;
+    margin: auto;
+    padding: 40px;
+    color:#fff;
+  }
+  
+  .container-body{
+    display: flex;
+    justify-content: space-between;
+  }
+  .colum1{
+    max-width: 900px;
+    margin-right: 10px;
+  }
+  
+  .colum1 h4{
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  /*.colum1 p{
+    font-size: 14px;
+    color: #E1D00D;
+    margin-top: 20px;
+  }*/
+  .hti{
+      font-size: 20px;
+      color: #E1D00D;
+  }
+  .pth{
+    font-size: 15px;
+    color: #fff;
+   
+  }
+  
+  .colum2{
+    max-width: 700px;
+    margin-right: 10px;
+    margin-left: 10px;
+    
+  }
+  
+  .colum2 h4{
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  .row{
+    margin-top: 20px;
+    display: flex;
+  }
+  
+  .row img{
+    width: 36px;
+    height: 36px;
+  }
+  
+  .row label{
+    margin-top: 10px;
+    margin-left: 20px;
+    color: #C7C7C7;
+  }
+  
+  .colum3{
+    max-width: 800px;
+    margin-left: 10px;
+   
+  }
+  
+  .colum3 h4{
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  .row2{
+    margin-top: 20px;
+    display: flex;
+  }
+  
+  .row2 img{
+    width: 36px;
+    height: 36px;
+  }
+  
+  .row2 label{
+    margin-top: 10px;
+    margin-left: 20px;
+    max-width: 140px;
+  }
